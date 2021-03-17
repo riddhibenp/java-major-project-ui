@@ -1,0 +1,73 @@
+$sidebar-theme: #edeff0;
+$theme-color: #3e416d;
+$font-color: #29303b;
+$font-faimily: gotham-rounded,helvetica neue,helvetica !important;
+
+  .box{
+     border: 1px solid $sidebar-theme;
+     padding-top: -1.2em;
+    height: 450px;
+    // overflow: scroll;
+    overflow: scroll;
+    box-shadow: 0 7px 14px 0 rgb(65 69 88 / 10%), 0 3px 6px 0 rgb(0 0 0 / 7%);
+    
+  }
+
+.myRow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+ 
+} 
+ /* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+    border-radius: 1px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: darkgray;
+    border-radius: 1px;
+    
+   
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: grey;
+  }
+  a{
+    text-decoration: none;
+  }
+.myFonts{
+  font-family: $font-faimily;
+  
+}
+.seeAll{
+  font-size: 15px;
+  color: lighten($font-color, 15);
+  cursor: pointer;
+}
+.myCards{
+  padding: 10px;
+  color: $theme-color;
+}
+.imgDash{
+  padding-top: 60px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+}  
+.categoryCards{
+  border:0px white;
+}
+.headingFonts{
+  color:$theme-color;
+}
+  

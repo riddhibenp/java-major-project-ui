@@ -1,0 +1,14 @@
+$sidebar-theme: #edeff0;
+$theme-color: #3e416d;
+$font-color: #29303b;
+$font-faimily: gotham-rounded,helvetica neue,helvetica !important;  
+.myFonts{
+  font-family: $font-faimily;
+  color:$font-color;
+}
+
+
+.lockColor{
+background-color: lighten($theme-color,30);
+color:$font-color;
+}

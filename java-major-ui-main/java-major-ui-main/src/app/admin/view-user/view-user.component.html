@@ -1,0 +1,84 @@
+<div class="container-fluid myFonts">
+    <div class="row my-4">
+        <div class="col-lg-2"></div>
+
+        <!-- <div class="col-lg-4">
+            
+            <input type="text" name="search" (ngModelChange)="searchUsers($event)" [(ngModel)]="searchInput">
+        </div> -->
+
+
+        <div class="col-lg-8">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sr NO.</th>
+                        <th>UserName</th>
+                        <th>Email</th>
+
+                        <th>Role</th>
+
+                        <th>Status</th>
+
+                        <th>Locked/Unlocked</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngIf=' searchInput==null ||searchInput == "" '>
+                        <tr *ngFor="let u of users , let i = index">
+                            <td>{{i+1}}</td>
+                            <td>
+                                {{u.username}}
+                            </td>
+                            <td>
+                                {{u.email}}
+                            </td>
+                            <td>
+                                {{u.role}}
+                            </td>
+                            <td>
+                                {{u.activated}}
+                            </td>
+                            <td *ngIf="u.locked==1">
+                                <button class="btn lockColor"> <i class="fas fa-lock "></i></button>
+                            </td>
+                            <td *ngIf="u.locked==0">
+                                <button class="btn btn-secondary"> <i class="fas fa-lock-open "></i></button>
+                            </td>
+                        </tr>
+                    </ng-container>
+
+
+                    <ng-container *ngIf='searchInput  != null && searchInput != "" '>
+                        <tr *ngFor="let u of userBySearch, let i = index">
+                            <td>{{i+1}}</td>
+                            <td>
+                                {{u.username}}
+                            </td>
+                            <td>
+                                {{u.email}}
+                            </td>
+                            <td>
+                                {{u.role}}
+                            </td>
+                            <td>
+                                {{u.activated}}
+                            </td>
+                            <td *ngIf="u.locked==1">
+                                <button class="btn lockColor"> <i class="fas fa-lock "></i></button>
+                            </td>
+                            <td *ngIf="u.locked==0">
+                                <button class="btn btn-secondary"> <i class="fas fa-lock-open "></i></button>
+                            </td>
+                        </tr>
+                    </ng-container>
+
+                </tbody>
+                <!-- FOR SEARCH -->
+
+
+
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container-fluid myFonts">
+  <div class="row float-end">
+      <div class="col-lg-12">
+          <a class="btn btn-primary myBtn" routerLink="/add-category"><i class="fas fa-plus pe-2"></i>New Category</a>
+        </div>
+  </div>
+
+  <div class="container">
+  <div class="row my-4">
+      <div class="col-lg-2 myTempDiv"></div>
+      <div class="col-lg-10">
+        <div class="row">
+          <div class="card mx-3 my-3 myCards" style="width: 18rem;" *ngFor="let c of categories" >
+                          
+              <div class="col-lg-12">
+                  <!-- <div class="col-lg-2"></div> -->
+              <img src="{{c.categoryLogo}}" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{c.categoryName}}</h5>
+                <p class="card-text">{{c.categoryDesc}}</p>
+                <a  class="btn btn-primary me-4" (click)="editCategory(c.categoryId)">Edit</a>
+                <a  class="btn btn-danger ms-5" (click)="deleteCategory(c.categoryId)">Remove</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+ 
+</div>        

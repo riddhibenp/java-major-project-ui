@@ -1,0 +1,80 @@
+
+<!-- <div class="container-fluid myFonts">
+        <div class="row cat">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                        <form [formGroup]="editCategoryForm">
+                                <input type="hidden" formControlName="categoryId"  >
+                                CategoryName: <input type="text" formControlName="categoryName" >
+                                
+                                <br>
+                                <br>
+                                Category-Description: <textarea rows="5" cols="10" formControlName="categoryDesc" ></textarea>
+                                <br>
+                                <br>
+                                <input type="text" formControlName="oldcategoryLogo"  >
+                                Category-Logo: <input type="file" multiple accept="image/*" formControlName="categoryLogo" >
+                                
+                                    
+                                    
+                                <br>
+                                <br>
+                               
+                                <input type="submit" value="Update" (click) ="updateCategory()">
+                            </form>
+                </div>
+        </div>
+ </div> -->
+
+ <div class="container myFonts my-5">
+                <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-10">
+                                        <div class="row">
+                                                        <div class="col-lg-6 headingFonts">
+                                                                <h2>Edit Category</h2>
+                                                        </div>
+                                                </div>
+                                                <div class=" px-5 py-5 formDiv">
+                                                <form [formGroup]="editCategoryForm" enctype="multipart/form-data">
+
+                                                <input type="hidden" formControlName="categoryId"  >
+                                                
+                                                <div class="row">
+                                                        <div class="col-lg-2">Category Name:</div>
+                                                        <div class="col-lg-8"><input type="text" formControlName="categoryName" class="form-control"></div>
+                                                </div><br>
+                                                
+                                                <div class="row">
+                                                        <div class="col-lg-2">Category Description:</div>
+                                                        <div class="col-lg-8"><textarea rows="5" cols="10" formControlName="categoryDesc" class="form-control"></textarea></div>
+                                                </div>  <br>
+
+                                                        <div class="row">
+
+                                                       
+                                                                        <div class="col-lg-2">Category Logo:</div>
+                                                                        <div class="col-lg-8"><input type="file"  multiple accept="image/*" formControlName="categoryLogo" class="form-control" (change)="readUrl($event)"></div><br>
+                                                                        <div class="row mt-3">
+                                                                                        <div class="col-lg-2"></div>
+                                                                                        <div class="col-lg-2">Previous Image:</div>
+                                                                                        <div class="col-lg-2"><div class="imgPreview"><img [src]="abc" class="img-fluid" alt="none selected" ></div></div>
+                                                                                        <div class="col-lg-2">Updated Image:</div>
+                                                                                        <div class="col-lg-2 "> <div class="imgPreview"><img [src]="url" class="img-fluid" alt="none selected"></div></div>
+                                                                        </div>
+                                                                       
+                                                                </div><br>
+                                                
+                                                <div class="row ">
+                                                        <div class="col-lg-2"></div>
+                                                        <div class="col-lg-8 "><input type="submit" value="Update category" class="btn btn-primary" (click) ="updateCategory()"></div>
+                                                </div>
+                                                
+                                                </form>
+                                                </div>
+                        </div>
+                </div>
+         </div>
+        
+        
+        

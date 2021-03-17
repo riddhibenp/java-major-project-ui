@@ -1,0 +1,69 @@
+
+ <div class="container myFonts my-5">
+                <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-10">
+                                        <div class="row">
+                                                        <div class="col-lg-6 headingFonts">
+                                                                <h2>Edit Course</h2>
+                                                        </div>
+                                                </div>
+                                                <div class=" px-5 py-5 formDiv">
+                                                <form [formGroup]="editCourseForm" enctype="multipart/form-data">
+
+                                               <input type="hidden" formControlName="courseId"  >
+                                                
+                                                <div class="row">
+                                                        <div class="col-lg-2">Selected Category:</div>
+                                                        <div class="col-lg-8"><input type="text" formControlName="categoryId" class="form-control"></div>
+                                                 </div><br>
+
+                                                <div class="row">
+                                                        <div class="col-lg-2">Course Name:</div>
+                                                        <div class="col-lg-8"><input type="text" formControlName="courseName" class="form-control"></div>
+                                                </div><br>
+                                                
+                                                <div class="row">
+                                                        <div class="col-lg-2">Course Description:</div>
+                                                        <div class="col-lg-8"><textarea rows="5" cols="10" formControlName="courseDesc" class="form-control"></textarea></div>
+                                                </div>  <br>
+                                                
+
+                                                <div class="row">
+
+                                                       
+                                                        <div class="col-lg-2">Course Logo:</div>
+                                                        <div class="col-lg-8"><input type="file"  multiple accept="image/*" formControlName="courseLogo" class="form-control" (change)="readUrl($event)"></div><br>
+                                                        <div class="row mt-3">
+                                                                        <div class="col-lg-2"></div>
+                                                                        <div class="col-lg-2">Previous Image:</div>
+                                                                        <div class="col-lg-2"><div class="imgPreview"><img [src]="abc" class="img-fluid" alt="none selected" ></div></div>
+                                                                        <div class="col-lg-2">Updated Image:</div>
+                                                                        <div class="col-lg-2 "> <div class="imgPreview"><img [src]="url" class="img-fluid" alt="none selected"></div></div>
+                                                        </div>
+                                                       
+                                                </div><br>
+
+                                                <div class="row">
+                                                                <div class="col-lg-2">Course Price:</div>
+                                                                <div class="col-lg-8"><input type="number"  formControlName="coursePrice"  class="form-control"></div>
+                                                </div><br>
+
+                                                <div class="row">
+                                                                <div class="col-lg-2"></div>
+                                                                <div class="col-lg-8"><input type="hidden"  formControlName="likes"  class="form-control"></div>
+                                                </div>
+                                                
+                                                <div class="row ">
+                                                        <div class="col-lg-2"></div>
+                                                        <div class="col-lg-8 "><input type="submit" value="Update course" class="btn btn-primary" (click) ="updateCourse()"></div>
+                                                </div>
+                                                
+                                                </form>
+                                                </div>
+                        </div>
+                </div>
+         </div>
+        
+        
+        

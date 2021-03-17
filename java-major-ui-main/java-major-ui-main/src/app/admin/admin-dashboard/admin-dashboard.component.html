@@ -1,0 +1,207 @@
+<div class="container myFonts">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        
+    <h4 class="col-lg-4 myCards myFonts">Welcome Divya!</h4></div>
+
+    <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="row">
+                      <div class="col-lg-2"></div>
+                    <div class="col-lg-4 ms-1">
+                            <div class="card mb-3 myRow" >
+                                    <div class="row g-0">
+                                      <div class="col-md-8  myCards">
+                                        <div class="card-body">
+                                          <h5 class="card-title"><strong>Total Users </strong></h5>
+                                          <p class="card-text pt-3 h4">{{total_user}}</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4 myCards">
+                                            <img src="../../../assets/d-student.png" alt="..." class="img-fluid ">
+                                          </div>
+                                    </div>
+                                    <hr>
+                                    <h5 class="ps-1"><div class="float-end h6 ">
+                                            <a href="#" class="seeAll pe-2">View more</a>
+                                        </div></h5>
+                                  </div>
+                    </div>
+
+                    <div class="col-lg-4 ">
+                            <div class="card mb-3 myRow" >
+                                    <div class="row g-0">
+                                      <div class="col-md-8 myCards">
+                                        <div class="card-body">
+                                          <h5 class="card-title"><strong>Total Categories</strong></h5>
+                                          <p class="card-text pt-3 h4">{{total_cat}}</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4 myCards">
+                                            <img src="../../../assets/d-sales.png" alt="..." class="img-fluid">
+                                          </div>
+                                    </div>
+                                    <hr>
+                                    <h5 class="ps-1"><div class="float-end h6 ">
+                                            <a href="#" class="seeAll pe-2">View more</a>
+                                        </div></h5>
+                                  </div>
+                    </div>
+
+
+                </div>
+                   
+              </div>
+              <div class="carousel-item">
+                    <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-4 ">
+                                    <div class="card mb-3 myRow" >
+                                            <div class="row g-0">
+                                              <div class="col-md-8 myCards">
+                                                <div class="card-body">
+                                                  <h5 class="card-title"><strong>Total Categories</strong></h5>
+                                                  <p class="card-text pt-3 h4">{{total_cat}}</p>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4 myCards">
+                                                    <img src="../../../assets/d-sales.png" alt="..." class="img-fluid">
+                                                  </div>
+                                            </div>
+                                            <hr>
+                                            <h5 class="ps-1"><div class="float-end h6 ">
+                                                    <a href="#" class="seeAll pe-2">View more</a>
+                                                </div></h5>
+                                          </div>
+                            </div>
+
+                            <div class="col-lg-4 ">
+                                    <div class="card mb-3 myRow">
+                                            <div class="row g-0">
+                                              <div class="col-md-8 myCards ">
+                                                <div class="card-body">
+                                                  <h5 class="card-title"><strong>Total Courses</strong></h5>
+                                                  <p class="card-text pt-3 h4">{{total_cou}}</p>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-4 myCards">
+                                                    <img src="../../../assets/d-graduation.png" alt="..." class="img-fluid">
+                                                  </div>
+                                            </div>
+                                            <hr>
+                                            <h5 class="ps-1"><div class="float-end h6 ">
+                                                    <a href="#" class="seeAll pe-2">View more</a>
+                                                </div></h5>
+                                          </div>
+                            </div>
+        
+                        </div>
+              </div>
+              
+            </div>
+       
+
+          <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
+            </div>
+
+        </div>
+          </div>
+    
+    
+   
+
+
+   
+
+
+    <!-- Categories Display-->
+    <div class="row ">
+            <div class="col-lg-2"></div>
+        <div class="col-lg-5 col-md-12 col-12 col-sm-12">
+            <div class="card mb-3 ">
+                <div class="row ">
+                    <div class="card-body">
+                        <h5 class="card-title ps-1 headingFonts">Categories<div class="float-end h6 ">
+                                <a routerLink="/categories"  class="seeAll pe-1">See all</a>
+                            </div>
+                        </h5>
+
+                        <p class="card-text ">
+
+                            <div class="box">
+                                <div class="card mb-3 categoryCards" *ngFor="let c of categories">
+                                    <div class="row">
+                                        <div class="col-4 px-3 py-3">
+                                            <img src="{{c.categoryLogo}}" alt="Category Logo"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title ">{{c.categoryName | titlecase}}</h5>
+                                                <p class="card-text">{{c.categoryDesc}}
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+
+                            </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-lg-5 col-md-12 col-12 col-sm-12">
+            <div class="card mb-3 myRow">
+                <div class="row">
+                    <div class="card-body">
+                        <h5 class="card-title ps-1 headingFonts">Courses <div class="float-end h6">
+                                <a routerLink="/courses" class="seeAll pe-1">See all</a>
+                            </div>
+                        </h5>
+                        <p class="card-text">
+
+                            <div class="box">
+                                <div class="card mb-3 categoryCards" *ngFor="let co of courses">
+                                    <div class="row">
+                                        <div class="col-4 px-3 py-3">
+                                            <img  src="{{co.courseLogo}}" alt="Course Logo" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{co.courseName | titlecase}}</h5>
+                                                <p class="card-text">{{co.courseDesc}}
+                                                </p>
+                                                <p class="card-text">{{co.coursePrice | currency : "INR"}}
+                                                    </p>
+                                                <p class="card-text"><small class="text-muted">{{co.category}}</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

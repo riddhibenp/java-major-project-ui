@@ -1,0 +1,108 @@
+
+<div class="container-fluid myFonts">
+    <div class="row float-end">
+        <div class="col-lg-12">
+            <a class="btn btn-primary myBtn" routerLink="/add-course"><i class="fas fa-plus pe-2"></i>New Course</a>
+          </div>
+    </div>
+<div class="container myFonts">
+
+        <!-- <div class="col-lg-4"><input type="text" name="search"  (ngModelChange)="getCategory($event)"  [(ngModel)]="search"></div> -->
+       
+   
+    <div class="row my-4">
+        <div class="col-lg-2"></div>
+       
+        <div class="col-lg-3">
+            <div class="card myRow">
+                <div class="row ">
+                    <div class="card-body">
+                        <h5 class="card-title ps-1 headingFonts">Categories
+                        </h5>
+
+                        <p class="card-text ">
+
+                            <div class="box">
+
+                                <div class="card courseCatCards " *ngFor="let c of categories">
+                                    <a (click)="getCoursesByCat(c.categoryName)">
+                                        <div class="row">
+                                            <div class="col-4 px-3 py-3">
+                                                <img src="{{c.categoryLogo}}" alt="Category Logo"
+                                                            class="img-fluid">
+                                             </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title ">{{c.categoryName | titlecase}}</h5>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </a>
+                                </div>
+
+
+
+                            </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card mb-3 myRow">
+                <div class="row">
+                    <div class="card-body">
+                           
+                        <h5 class="card-title ps-1 headingFonts" *ngIf="!catName">All Courses</h5>
+                        <h5 class="card-title ps-1 headingFonts" *ngIf="catName">{{catName}} <div class="float-end  seeAll pe-2">
+                          ({{coursesByCatCount}}) Courses
+                        </div>
+                        </h5>
+                        <p class="card-text">
+
+                            <div class="box">
+                                    <div class="px-5 text-center py-5"  *ngIf="coursesByCat.length==0">
+                                            No Courses Found!!!
+                                        </div>
+                                <div class="card mb-3 courseCards" *ngFor="let co of coursesByCat">
+                                   <div class="row">
+                                       
+                                        <div class="col-12 col-lg-4 ">
+                                            <img src="{{co.courseLogo}}" alt="Course Logo" class="img-fluid courseImg">
+                                        </div>
+
+                                        <div class="col-md-6 col-6">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{co.courseName | titlecase}}</h5>
+                                                <p class="card-text">{{co.courseDesc}}
+                                                </p>
+                                                <p class="card-text">{{co.coursePrice | currency : "INR"}}
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">{{co.category}}</small>
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-2 col-4">
+                                                <a class="btn btn-primary my-4 "  (click)="editCourse(co.courseId)"><i class="far fa-edit"></i></a><br>
+                                                <a  class="btn btn-danger my-3" (click)="deleteCourse(co.courseId)"><i class="far fa-trash-alt"></i></a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

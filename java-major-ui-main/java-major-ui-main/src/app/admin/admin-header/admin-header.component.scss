@@ -1,0 +1,21 @@
+$theme-color: #3e416d;
+$basic-font-color: #ffffff;
+.myNav{
+    background-color: $theme-color;
+    color: $basic-font-color;
+}
+
+.myBadge{
+    top: -.7em;
+    position: relative;
+    font-size: 75%;
+    line-height: 0.5;
+    left: -.3em;
+    
+    
+   
+}
+body{
+    background-color: #edeff0;
+}
+
